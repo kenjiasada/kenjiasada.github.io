@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+    <!-- Your CSS files -->
+    <link rel="stylesheet" href="styles/styles.css">
+    
+    <!-- google fonts: Open Sans (sans-serif) and Lora (serif) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap" rel="stylesheet">
+      
+    <title>Lede page</title>
+  </head>
+
+  <body class="light-theme"> <!-- all of the content on your html page goes inside the body -->
+
+    <div class="header">
+      <p class="kicker">Optional kicker</p>
+      <h1 class="headline">Where are private jets hurrying to?</h1>
+      <h2 class="subhead">At this very minute, more than 300 aircrafts may be flying plivately in the sky of the Earth. Where are they going? I reserched all of the flights in the afternoon on July 9 and sorted them by type of flights and aircrafts. I found some tendencies.</h2>
+      <p class="byline">By KENJI ASADA</p>
+      <p class="date">Published July 12, 2019</p>
+    </div>
+
+    <div class="story-body">
+      <p class="body-text serif">A lot of airplanes make flights everyday. Tens of thousands of flights connect airports to airports. Thanks to that, more and more people enjoy flying and are able to move quickly.</p>
+      <p class="body-text serif">But still very few people enjoy more luxuary flights. Private jets offer flight at anytime when you want and to airport where otherones cannot approach easily.</p>
+      <p class="body-text serif">How those unecofriendly and highcost flights are used. For business, leisure, tourlism, etc...?</p>
+    </div>
+
+    <div class="chart-section">
+      <p class="chart-title">375 private aircrafts in the sky</p>
+      <p class="chart-subhead">This shows the all of the aircrafts which have no airline code. The number of arrows is 375. Most of the flights are centralized to U.S.A. and Europe. <br>
+        It's because this image is a picture of the sky at 16:42 of EST. Most of the asia is in the night.</p>
+      <div class="chart-row">
+        <div class="chart">
+          <img src="all_private_flights.gif"/>
+        </div>
+      </div>
+      <p class="chart-source">Image: by KENJI ASADA</p>
+    </div>
+
+    <div class="story-body">
+      <h3 class="section-head serif">How to see the world above the clouds</h3>
+      <p class="body-text serif">I used the <a href='https://aviation-edge.com/subscribe/profile.php'>Aviation Edge API</a> to get the data of the flights. This API is collecting the public signals from flying aircrafts about position, destination, origins, speed, type of the aorcraft, etc., and offers 100 free requests for users. </p>
+      <p class="body-text serif">When I requested the data at 16:42 on July 9(EST), there were 18,218 airplanes in the sky. I selected only the planes which don't have airline code, which means that those flights are not scheduled ones but under private purposes.</p>
+      <p class="body-text serif">After the filtering, I got 375 flights. I connected the origin port and destination port by arrows with the label of the aircraft code. Can we see the activity of private flights at a glance?<br> </p>
+
+      <div class="chart-section">
+        <p class="chart-title">Top 10 destinations and origins</p>
+        <p class="chart-subhead"></p>
+        <div class="chart-row">
+          <div class="chart">
+            <p class="chart-label"></p>
+            <img src="images/top10destination.gif"/>
+          </div>
+          <div class="chart">
+            <p class="chart-label"></p>
+            <img src="images/top10origins.gif"/>
+          </div>
+        </div>
+        <p class="chart-source">Sources: Aviation Edge API edited by KENJI ASADA</p>
+      </div>
+
+      <p class="body-text serif">Let's see where they are going to. The top of the destinations is "SXF". This is the code of Berlin Schönefeld Airport, the 2nd airport for Berlin. I could not find the reason why so many private flights are going to the capital city of Germany. Second top is "SGD", this is the code of Charles de Gaulle Airport in Paris. The 3rd is "SCF", Scottsdale Airport in Phoenix, U.S.A.</p>
+      <p class="body-text serif">On the other hand, the origins of those flights are totally different. The top "DVT" is Deer Valley Airport, another airport in Phoenix. This airport has been used as a center of general aviation and militery purposes. This city is a hub of aviational education. So the private flights around Phoenix seem to be educational trainings. The other top is "TXL", Berlin Tegel Airport and the 3rd is "MUC", Munich International Airport. I have not figured out the reason why so many flights are centralized to Germany.</p>
+    </div>
+
+    <div class="story-body">
+      <h3 class="section-head serif">Private jets are mainly used in U.S.A.</h3>
+      <p class="body-text serif">We found that the private flights include training flights. To approach the real figure of private jets world, let me show you the chart below.</p>
+      <div class="chart-section">
+        <div class="chart">
+          <img src="images/top20aircrafts.gif"/>
+        </div>
+        <p class="chart-source">Sources: Aviation Edge API edited by KENJI ASADA</p>
+      </div>
+      <p class="body-text serif">The top 2 types of aircrafts, "C172" and "P28A" are small and propeller driven aircrafts. Those are not "business jets", but planes for training, hobby, measurement, or agriculture.</p>
+      <p class="body-text serif">"A319" and "A320" are midium size passenger plane made by European maker Airbus. Those are sometimes used for super luguxary private jets for billionaires, but, in fact, most of them are chartered plane for tours conducted by tourlism companies. For example, a A320 whose registration number is "GMIDO" has no airline code, but actually it is owned by British Airways. We can comfirm that <a href="https://www.youtube.com/watch?v=LFDT9n71XxU">here</a>.</p>
+      <p class="body-text serif">Then, which is the typical "private jet"? CL30 and CL35 are Bombardier's rear engine business jets. The best sellers are Cessna's Citation Series and Gulfstream's products, which are described as codes like "C25A", "C550", "GLF4", etc... Where are they flying?Where are they flying?</p>
+      <div class="story-body">
+        <div class="photo-section">
+          <div class="photo">
+            <img src="images/CL300.jpg" alt="dog" />
+            <p class="caption">Bombardier CL300 (Wikipedia)</p>
+          </div>
+        </div>
+      </div>
+      <p class="body-text serif">Above is the picture of one typical private jet, Bombardier C300 which has IATA aricraft code "CL30". I filtered the data by aircraft codes and got the image which show only those typical private jets. We found something wierd. Look at the next image.</p>
+      <div class="story-body">
+        <div class="photo-section">
+          <div class="chart">
+            <img src="images/private_jet_flights.gif" alt="dog" />
+            <p class="caption">Image: By KENJI ASADA</p>
+        </div>
+      </div>
+        
+      <p class="body-text serif">Most of the private jets' flights are related to U.S.A. This luxualy thing is still unpoluar in the rest of the world. Let's close up to the U.S.A.</p>
+
+      <div class="story-body">
+        <div class="photo-section">
+          <div class="chart">
+            <img src="images/us_flights.gif" alt="dog" />
+            <p class="caption">Image: By KENJI ASADA</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="body-text serif">We can see that the most of the flights are between large cities such as New York, San Francisco, Chicago, etc. Some aircrafts are heading to Las Vegas and Miami, but I suppose that those are mainly business purposes.</p>
+      <p class="body-text serif">After the 2008 global financial crisis, exectives of large companies which requested help for government were blamed for their use of business jets. Those have been regarded as symbol of wealth and sometimes arrogance. But from other aspect, those are a great invention to make peoples life more efficient than ever.</p>
+      <p class="body-text serif">In U.S.A., where the population is leaner than Europe and East Asia, the transportation between the large cities are less convenient. Instead of highways and rapid trains, business jets are sometimes seriously necessary for the people who should not lose their time.</p>
+      <p class="body-text serif">I have no time to investigate this dataset further than this for now, but actually a lot of possibilities are hidden beneath the surfcace of this data. Althought we cannot see the militaly flights directly, a lot of militaly related flights are visible. For example, armies hires freight aircraft to send weapons or foods for the soldiers. A lot of the airplanes are flying to or from the airbases in the world. If you search the codes like "OSN" or "KBL", you'll be confronted by some interesting results. "OSN" is the airport code of US Airbase in Osan, South Korea, and "KBL" is that of airport in Kabul, the capital of Afganistan.</p>
+    
+      <div class="story-body">
+        <div class="photo-section">
+          <div class="chart">
+            <img src="images/OSN_KBL.png" alt="dog" />
+            <p class="caption">Image: By KENJI ASADA</p>
+          </div>
+        </div>
+      </div>
+      
+      <p class="body-text serif">If we could notice the increase of freight to militaly base, we should watch the militaly activities and could predict some conflicts. It is seriously useful for journalists.</p>
+    </div>
+
+    <div class="footer">
+      <p class="note">Note: Any end notes can go here.</p>
+    </div>
+  </body>
+</html>
