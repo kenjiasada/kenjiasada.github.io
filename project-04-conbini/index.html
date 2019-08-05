@@ -12,56 +12,57 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap" rel="stylesheet">
       
-    <title>Lede page</title>
+    <title>konbini Map</title>
   </head>
 
   <body class="light-theme"> <!-- all of the content on your html page goes inside the body -->
 
     <div class="header">
       <p class="kicker">Optional kicker</p>
-      <h1 class="headline">People are lack of Conbini in western Japan?</h1>
-      <h2 class="subhead">If you need a subhead, it can go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
-      <p class="byline">By Firstname Lastname</p>
-      <p class="date">Published Month XX, 2019</p>
+      <h1 class="headline">There are shortage of "konbini" in western Japan?</h1>
+      <h2 class="subhead">Konbini is now an indispensable lifeline for Japanese people. Not only selling foods or daily goods, but it provides a lot of neccesary services for their daily life --- payment of tax, postal service, withdrawing money... Through a location data research, I found that konbinies distribution is skewd to east and north side of Japan</h2>
+      <p class="byline">By KENJI ASADA</p>
+      <p class="date">Published August 3, 2019</p>
     </div>
 
     <div class="story-body">
-      <p class="body-text serif">As for June 30, the number of stores for each conbini brand are: Seven-Eleven 20,973, Family Mart 16,438, LAWSON 14,659(Feb. 28), Mini Stop 2,004.</p>
-      <p class="body-text serif">In ut egestas velit, non porta sapien. Nam quis magna luctus, fermentum nunc quis, ullamcorper neque. Morbi eget risus neque. Integer a tellus in lorem dapibus rutrum. Sed ut sapien libero. Cras rutrum semper aliquam. Donec in dignissim velit.</p>
-      <p class="body-text serif">Vivamus sagittis massa urna, nec condimentum enim tristique at. Mauris a erat quis diam pretium scelerisque a vel dolor. Etiam pulvinar laoreet gravida. Quisque consectetur, arcu non tempor pharetra, tortor massa rhoncus arcu, id vulputate tellus lectus ut elit.</p>
+      <p class="body-text serif">Methodology: I scraped "MapFan"(an website which provides commercial location info) to build the list of konbinies. After I build the list, I cleaned that data first, and then input those addresses into Google Geocoding API to get longitude and latitude. I put geolocation data to QGIS and merged that konbini data with munisipality polygon data.</p>
+      <p class="body-text serif">Notes: As for June 30, the number of stores for each konbini brand are: Seven-Eleven 20,973, Family Mart 16,438, LAWSON 14,659(Feb. 28), Mini Stop 2,004. This number is different from my dataset. (Especially the I have 24,000 SEVEN-ELEVEN data...) It maybe because there are still some dupulicates or because some data in MapFan are too old.</p>
+      <p class="body-text serif">In west japan, especially in Kyushu district, it is said that drug stores are prominent. I'm not sure the reason, but I think someone says there is relation with income.</p>
+      <p class="body-text serif">If I plot the drug stores, it probably will be a different scenery...  I know that if I can get more accurate data if I scrape the official sites of every convenience stores. But it seems impossible to do that due to the structure of the websites.</p>
     </div>
 
       <div class="chart-section">
-        <p class="chart-title">Time for some graphics</p>
-        <p class="chart-subhead">This is a standard, single chart which fits in the same width as the story.</p>
+        <p class="chart-title">Seven-Eleven is prominent in the most of Japan</p>
+        <p class="chart-subhead">Seven-Eleven has apparently the top share in Japanese konbini market. But in some part of Japan, other brands shows strongness. For example, Seico Mart focuses on countryside in Hokkaido and Lawson has large share in Okinawa. Historically, Lawson is popular in west Japan, and Family Mart and Ministop has strong competence in central area (around Nagoya).</p>
         <div class="chart-row">
           <div class="chart">
             <img src="images/all_conbini_map.png"/>
           </div>
         </div>
-        <p class="chart-source">Sources: One source; another source</p>
+        <p class="chart-source">Image: KENJI ASADA based on info from MapFan</p>
       </div>
 
       <div class="chart-section">
-        <p class="chart-title">Time for some graphics</p>
-        <p class="chart-subhead">This is a standard, single chart which fits in the same width as the story.</p>
+        <p class="chart-title">In north & east areas, people demand more konbinies...</p>
+        <p class="chart-subhead">Hokkaido and Tohoku look more red than Kansai and Shikoku. The number of konbinies per population is larger in north and east Japan. There seem to be some reasons. Population density, the difference of chain management strategies, competition with other type of shops like drug stores or super market, etc.</p>
         <div class="chart-row">
           <div class="chart">
             <img src="images/num_conbini_per_10000pop.png"/>
           </div>
         </div>
-        <p class="chart-source">Sources: One source; another source</p>
+        <p class="chart-source">Image: KENJI ASADA based on info from MapFan</p>
       </div>
 
-    <div class="story-body">
+    <!-- <div class="story-body">
       <h3 class="section-head serif">This is what a section hed looks like</h3>
       <p class="body-text serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur purus sapien, tincidunt ac bibendum eget, cursus vel mi. Sed cursus tincidunt rutrum. Quisque auctor ut erat ut rhoncus. Nam vel neque mauris. Sed vel ex justo. Duis et sagittis dolor. In at auctor libero. Quisque at nisi quis elit tempus placerat.</p>
       <p class="body-text serif">In ut egestas velit, non porta sapien. Nam quis magna luctus, fermentum nunc quis, ullamcorper neque. Morbi eget risus neque. Integer a tellus in lorem dapibus rutrum. Sed ut sapien libero. Cras rutrum semper aliquam. Donec in dignissim velit.</p>
-    </div>
+    </div> -->
 
       <div class="chart-section">
-        <p class="chart-title">Side-by-side charts</p>
-        <p class="chart-subhead">You can put two charts side by side by putting two .chart divs inside the .chart-row div.</p>
+        <p class="chart-title">See the strategy of every franchisers</p>
+        <p class="chart-subhead"></p>
         <div class="chart-row">
           <div class="chart">
             <p class="chart-label">SEVEN-ELEVEN</p>
@@ -72,7 +73,7 @@
             <img src="images/lawson_map.png"/>
           </div>
         </div>
-        <p class="chart-source">Sources: One source; another source</p>
+        <!-- <p class="chart-source">Sources: One source; another source</p> -->
       </div>
 
       <div class="chart-section">
@@ -88,22 +89,23 @@
             <img src="images/seico_mart_map.png"/>
           </div>
         </div>
-        <p class="chart-source">Sources: One source; another source</p>
+        <p class="chart-source">Image: KENJI ASADA</p>
       </div>
     
-    <div class="story-body">
+    <!-- <div class="story-body">
       <p class="body-text serif">Nulla purus velit, ultricies sed orci nec, mollis venenatis ligula. Integer euismod urna eu nulla semper varius. Vestibulum pulvinar, velit et ornare ullamcorper, ligula libero tempus tortor, et congue libero nisi nec lorem. Etiam vestibulum molestie nibh, et pulvinar eros efficitur a. Vivamus et nisl vel est venenatis hendrerit ac non felis. Vestibulum id malesuada lectus. Praesent mi dolor, aliquam in felis id, ultricies molestie nisi.</p>
-    </div>
-    <div class="story-body">
+    </div> -->
+
+    <!-- <div class="story-body">
       <h3 class="section-head serif">Another section head</h3>
       <p class="body-text serif">Vivamus sagittis massa urna, nec condimentum enim tristique at. Mauris a erat quis diam pretium scelerisque a vel dolor. Etiam pulvinar laoreet gravida. Quisque consectetur, arcu non tempor pharetra, tortor massa rhoncus arcu, id vulputate tellus lectus ut elit.</p>
       <p class="body-text serif">Nulla purus velit, ultricies sed orci nec, mollis venenatis ligula. Integer euismod urna eu nulla semper varius. Vestibulum pulvinar, velit et ornare ullamcorper, ligula libero tempus tortor, et congue libero nisi nec lorem. Etiam vestibulum molestie nibh, et pulvinar eros efficitur a. Vivamus et nisl vel est venenatis hendrerit ac non felis. Vestibulum id malesuada lectus. Praesent mi dolor, aliquam in felis id, ultricies molestie nisi.</p>
       <p class="body-text serif">Aenean porta, urna venenatis venenatis pretium, mi neque faucibus ex, ac sollicitudin neque justo et felis. Sed vitae ornare metus, id dapibus sapien. Duis lobortis rhoncus dictum. Aliquam sodales, eros et pharetra ultricies, erat lectus convallis purus, sit amet ultricies odio tortor eu ligula.</p>
-    </div>
+    </div> -->
 
     <div class="chart-section">
-      <p class="chart-title">Side-by-side charts</p>
-      <p class="chart-subhead">Generally speaking, when the population density increases, the density of conbini also increases. But if we split the map into east and west, in the east side, the corration is relatively flat compare to the west side. This means, in the country side in west Japan, the number of conbinies is lower than east Japan.</p>
+      <p class="chart-title">Let's see the linear regression...</p>
+      <p class="chart-subhead">Generally speaking, when the population density increases, the density of konbini also increases. But if we split the map into east and west, in the east side, the corration is relatively flat compare to the west side. This means, in the country side in west Japan, the number of konbinies is lower than east Japan.</p>
       <div class="chart-row">
         <div class="chart">
           <p class="chart-label">Eastern Japan</p>
@@ -114,89 +116,9 @@
           <img src="images/coefficient_pop_dens_W.png"/>
         </div>
       </div>
-      <p class="chart-source">Sources: One source; another source</p>
+      <p class="chart-source">Image: KENJI ASADA</p>
     </div>
 
-    <div class="chart-section">
-      <p class="chart-title">Wider charts</p>
-      <p class="chart-subhead">You can break out of the story well by placing the .chart-section div outside of the .story-body div. You can change the max width of this div in the CSS. You can put up to four charts side-by-side inside a .chart-row div.</p>
-      <div class="chart-row">
-        <div class="chart">
-          <p class="chart-label">Optional chart label</p>
-          <img src="images/test-chart.png"/>
-        </div>
-        <div class="chart">
-          <p class="chart-label">Optional chart label</p>
-          <img src="images/test-chart.png"/>
-        </div>
-        <div class="chart">
-          <p class="chart-label">Optional chart label</p>
-          <img src="images/test-chart.png"/>
-        </div>
-        <div class="chart">
-          <p class="chart-label">Optional chart label</p>
-          <img src="images/test-chart.png"/>
-        </div>
-      </div>
-      <div class="chart-row">
-        <div class="chart">
-          <p class="chart-label">Optional chart label</p>
-          <img src="images/test-chart.png"/>
-        </div>
-        <div class="chart">
-          <p class="chart-label">Optional chart label</p>
-          <img src="images/test-chart.png"/>
-        </div>
-        <div class="chart">
-          <p class="chart-label">Optional chart label</p>
-          <img src="images/test-chart.png"/>
-        </div>
-      </div>
-      <p class="chart-source">Sources: One source; another source</p>
-    </div>
-
-    <div class="story-body">
-      <h3 class="section-head serif">What about photos?</h3>
-      <p class="body-text serif">Maecenas pharetra quis turpis id finibus. Pellentesque nec nisi quis lectus vehicula faucibus. Morbi finibus mi sed lacus vehicula laoreet. Donec varius, nisl sed laoreet vehicula, metus justo vestibulum magna, eget vehicula diam sem vitae urna. Aliquam lobortis lorem et vestibulum viverra. Proin convallis ut ex nec accumsan. Nulla convallis bibendum eros. Integer consectetur metus eu dolor tempor elementum. Aenean porta, mi a hendrerit pretium, nunc tellus feugiat magna, a scelerisque lectus velit et neque. In nec hendrerit arcu.</p>
-      <div class="photo-section">
-        <div class="photo">
-          <img src="images/test-photo.jpg" alt="dog" />
-          <p class="caption">Photo captions are typically below the image and end with the photographer's credit (Firstname Lastname/AGENCYNAME)</p>
-        </div>
-      </div>
-      <p class="body-text serif"><strong>You can break out of the story well with photos too. Just place it outside of the story-body div.</strong> Nulla ut interdum risus. Praesent hendrerit scelerisque diam sit amet ullamcorper. Nulla non rhoncus tortor.</p>
-    </div>
-
-    <div class="photo-section">
-      <div class="photo">
-        <img src="images/test-photo.jpg" alt="dog" />
-        <p class="caption">Photo captions are typically below the image and end with the photographer's credit (Firstname Lastname/AGENCYNAME)</p>
-      </div>
-    </div>
-
-    <div class="story-body">
-      <p class="body-text serif">Maecenas pharetra quis turpis id finibus. Pellentesque nec nisi quis lectus vehicula faucibus. Morbi finibus mi sed lacus vehicula laoreet. Donec varius, nisl sed laoreet vehicula, metus justo vestibulum magna, eget vehicula diam sem vitae urna. Aliquam lobortis lorem et vestibulum viverra. Proin convallis ut ex nec accumsan. Nulla convallis bibendum eros. Integer consectetur metus eu dolor tempor elementum. Aenean porta, mi a hendrerit pretium, nunc tellus feugiat magna, a scelerisque lectus velit et neque. In nec hendrerit arcu.</p>
-      <p class="body-text serif">In ut egestas velit, non porta sapien. Nam quis magna luctus, fermentum nunc quis, ullamcorper neque. Morbi eget risus neque. Integer a tellus in lorem dapibus rutrum. Sed ut sapien libero. Cras rutrum semper aliquam. Donec in dignissim velit.</p>
-      <p class="body-text serif"><strong>You can add up to three .photo divs in a .photo-section as well, just like you can with .chart divs in a .chart-row</strong></p>
-    </div>
-
-    <div class="photo-section">
-      <div class="photo">
-        <img src="images/test-photo.jpg" alt="dog" />
-        <p class="caption">Photo captions are typically below the image and end with the photographer's credit (Firstname Lastname/AGENCYNAME)</p>
-      </div>
-      <div class="photo">
-        <img src="images/test-photo.jpg" alt="dog" />
-        <p class="caption">Photo captions are typically below the image and end with the photographer's credit (Firstname Lastname/AGENCYNAME)</p>
-      </div>
-      <div class="photo">
-        <img src="images/test-photo.jpg" alt="dog" />
-        <p class="caption">Photo captions are typically below the image and end with the photographer's credit (Firstname Lastname/AGENCYNAME)</p>
-      </div>
-    </div>
-
-    <div class="footer">
-      <p class="note">Note: Any end notes can go here.</p>
-    </div>
+    
   </body>
 </html>
