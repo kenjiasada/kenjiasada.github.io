@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+    <!-- Your CSS files -->
+    <link rel="stylesheet" href="styles/styles.css">
+    
+    <!-- google fonts: Open Sans (sans-serif) and Lora (serif) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap" rel="stylesheet">
+      
+    <title>Ship Exporting</title>
+  </head>
+
+  <body class="light-theme"> <!-- all of the content on your html page goes inside the body -->
+
+    <div class="header">
+      <p class="kicker">Optional kicker</p>
+      <h1 class="headline">Japan's ship export is hanging low despite of the shipbuilders' expectation</h1>
+      <h2 class="subhead">This is a work for scraping training of PDFs. The original data is <a href="https://www.jsea.or.jp/">Japan Ship Exporters' Association</a>. It publishes monthly report about the number and types of exported ships.</h2>
+      <p class="byline">By KENJI ASADA</p>
+      <p class="date">Published August 11, 2019</p>
+    </div>
+
+    <div class="story-body">
+      <p class="body-text serif">It publishes monthly reports in PDF files. It always uses the same format. I saved every pdf files in its website and converted them to text. Unfortunately, most of the Japanese organizations publishes reports in unfriendly format for computers, like PDF files. In order to practice data journalism in Japan, we have to get familier with PDF scraping technics.</p>
+
+      <div class="chart-section">
+        <p class="chart-title">Total ship export</p>
+        <p class="chart-subhead">Before the world financial craisis, Japanese shipbuilders had enjoyed their golden age. But the market shrinked suddenly and they has been in the long period of hanging low.</p>
+        <div class="chart-row">
+          <div class="chart">
+            <img src="images/ship_export.gif"/>
+          </div>
+        </div>
+        <p class="chart-source">Sources: Japan Ship Exporters' Association</p>
+      </div>
+
+      <div class="chart-section">
+        <p class="chart-title">LNG carriers and very large oil tanker</p>
+        <p class="chart-subhead">This is a stacked bar chart which shows the export of high-end ships. To build LNG carriers or very large crude oil carrier(VLCC), it requires advanced technology. Those have been Japanese shipbuilders' strong categories, but recently Korean and Chinese shipbuilders has been improving their skills. It is one of the causes of decline of Japanese shipbuilding industry.</p>
+        <div class="chart-row">
+          <div class="chart">
+            <img src="images/LNG_VLCC.gif"/>
+          </div>
+        </div>
+        <p class="chart-source">Sources: Japan Ship Exporters' Association</p>
+      </div>
+
+      <h3 class="section-head serif">Some problems I found through the scraping work</h3>
+      <p class="body-text serif">I got more than 200 pdf files. But some of them has encoding problems. So I lost the record around 2004. We have to fill the values manually.</p>
+      <p class="body-text serif">If we don't have the documents in the same format, we cannot success scraping. Most of the documents are written manually, there is always irregularities. It's difficult to deal with irregular data.</p>
+      <p class="body-text serif">And also, if we are provided data in table stype, not in text data, it is difficult to get the values which we target. Because it is difficult to identify which figure is target.</p>
+      </div>
+
+    <div class="footer">
+      <p class="note">Note: Any end notes can go here.</p>
+    </div>
+  </body>
+</html>
