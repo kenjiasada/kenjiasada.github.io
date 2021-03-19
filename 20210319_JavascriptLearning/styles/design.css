@@ -1,0 +1,17 @@
+body{
+    background: #eeeeee;
+    font-family: 'Times New Roman', Times, serif;
+}
+div{
+    background: #eeee00;
+    width: 300px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rebeccapurple;
+    margin: 30px auto;
+}
+#design1{
+    font-size: 30px;
+    font-family: fantasy;
+    color: seagreen;
+}
