@@ -1,0 +1,1 @@
+document.write("<p>Training for JavaScript Here<br>by another file</p>")
