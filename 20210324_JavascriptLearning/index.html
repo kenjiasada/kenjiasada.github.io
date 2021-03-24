@@ -2,10 +2,20 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>変数の利用</title>
+        <title>変数もろもろ</title>
     </head>
+    <style>
+        h2{
+            border-bottom: 3px solid #ff3366;
+        }
+
+        h3{
+            background: #93d173;
+        }
+    </style>
 
     <body>
+        <h2>変数の利用</h2>
         <h3>問題1</h3>
         <p>16 + 21 は？<button onclick="showAnswer();">解答を見る</button></p>
 
@@ -15,10 +25,18 @@
         <h3>問題3</h3>
         <p>埼玉県の県庁所在地は？<button onclick="showAnswer3();">解答を見る</button></p>
 
+        <h2>変数の演算</h2>
+        <h3>問題4</h3>
+        <p>a=10, b=4の場合</p>
+        <button onclick="add();">足し算</button>
+        <button onclick="substract();">引き算</button>
+        <button onclick="multiply();">掛け算</button>
+        <button onclick="divide();">割り算</button>
+
         <script>
             function showAnswer(){
                 let answer = 37;
-                alert(answer);
+                alert('答えは'+answer+'です。');
             }
 
             function showAnswer2(){
@@ -29,6 +47,25 @@
             function showAnswer3(){
                 let answer = 'さいたま市';
                 alert(answer);
+            }
+
+            let a=10;
+            let b=4;
+
+            function add(){
+                alert(a+b);                
+            }
+
+            function substract(){
+                alert(a-b);                
+            }
+
+            function multiply(){
+                alert(a*b);                
+            }
+
+            function divide(){
+                alert(a/b);                
             }
 
         </script>
