@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - JS_training_20210403</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>
+  人口の多い国ランキング
+</h1>
+
+<li>1.中国</li>
+<li>2.インド</li>
+<li>3.アメリカ</li>
+<li>4.インドネシア</li>
+<br>
+<button onclick='flag();'>国旗で表示</button>
+<!-- partial -->
+  <script>
+  function flag(){
+  country = document.querySelectorAll('li');
+  country[0].innerHTML = '<img src="./flag_CHN.png">';
+  country[1].innerHTML = '<img src="./flag_IND.png">';
+  country[2].innerHTML = '<img src="./flag_USA.png">';
+  country[3].innerHTML = '<img src="./flag_IDN.png">';
+
+  }
+
+  </script>
+
+</body>
+</html>
