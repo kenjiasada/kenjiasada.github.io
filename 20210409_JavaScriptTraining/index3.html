@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>JS_training_20210409</title>
+  <style>
+    #_button{
+      font-size: 30px;
+      font-weight: 300;
+    }
+
+    #explanation {
+      font-size: 40px;
+      font-weight: bolder;
+      color: blue;
+    }
+  </style>
+
+</head>
+<body>
+
+<h1>
+  問題
+</h1>
+
+<p>最も面積が大きい県は何県でしょう？</p>
+
+<br>
+<button onclick="counter();" id='_button'>ヒントを見る</button>
+
+<p id='explanation'></p>
+
+  <script>
+    let i=0;
+    let exp = document.getElementById('explanation');
+    let _button = document.getElementById('_button');
+    function counter(){
+      i=i+1;
+      switch(i){
+        case 1:
+          exp.textContent = '（ヒント）北海道は県ではありません。';
+          _button.textContent = '超超大ヒントを見る';
+          break;
+        case 2:
+          exp.textContent = '（ヒント）東北地方にあります。';
+          _button.textContent = '答えを見る';
+          break;
+        default:
+          exp.textContent = 'ぽに〜　正解は・・・　岩手県です！';
+      }
+    }
+  </script>
+
+</body>
+</html>
