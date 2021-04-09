@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>JS_training_20210406</title>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>
+  写真の一覧
+</h1>
+
+<p id='photoes'>以下のボタンをクリックすると、写真が一覧表示されます。</p>
+<br>
+<button onclick='showPhotoes();' id='button_0'>写真を表示</button>
+<!-- partial -->
+  <script>
+  function showPhotoes(){
+  let num = ['1', '2', '3', '4', '5', '6', '7', '8'];
+  let p_place = document.getElementById('photoes');
+  p_place.insertAdjacentHTML('afterend','<img src="./photo_'+num[0]+'.jpg">');
+  p_place.insertAdjacentHTML('afterend','<img src="./photo_'+num[1]+'.jpg">');
+  p_place.insertAdjacentHTML('afterend','<img src="./photo_'+num[2]+'.jpg">');
+  p_place.insertAdjacentHTML('afterend','<img src="./photo_'+num[3]+'.jpg">');
+  p_place.insertAdjacentHTML('afterend','<img src="./photo_'+num[4]+'.jpg">');
+  p_place.insertAdjacentHTML('afterend','<img src="./photo_'+num[5]+'.jpg">');
+  p_place.insertAdjacentHTML('afterend','<img src="./photo_'+num[6]+'.jpg">');
+  p_place.insertAdjacentHTML('afterend','<img src="./photo_'+num[7]+'.jpg">');
+  document.getElementById('button_0').remove();
+  }
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>JS_training_20210407</title>
+  <style>
+    table{
+      border-collapse: collapse;
+    }
+    td, th{
+      border: solid 1px;
+    }
+    td{
+      text-align: right;
+    }
+    th{
+      background-color: aqua;
+      column-width: 100px;
+      }
+  </style>
+
+</head>
+<body onload='showTable();'>
+
+<h1>
+  入場料の一覧
+</h1>
+
+<table>
+  <thead>
+    <tr id='t_head_r'></tr>
+  </thead>
+  <tbody id='t_body'>
+  </tbody>
+</table>
+
+  <script>
+    let columns = ['　','大人','高校生','中学生','小学生'];
+    let prices = [800, 680, 450, 380]
+    let t_h_r = document.getElementById('t_head_r');
+    let t_b = document.getElementById('t_body');
+    function showTable(){
+      for(let i=0; i<=4; i++){
+        t_h_r.insertAdjacentHTML('beforeend', '<th>'+columns[i]+'</th>');
+      }
+      for(let j=1; j<=5; j++){
+        t_b.insertAdjacentHTML('beforeend', '<tr id="_tbtr'+j+'"><th>'+j+'人</th></tr>');
+        let tbtr = document.getElementById('_tbtr'+j);
+        for(let k=0; k<=3; k++){
+          tbtr.insertAdjacentHTML('beforeend','<td>'+prices[k]*j+'円</td>');
+        }
+      }
+    }
+
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>JS_training_20210406</title>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>
+  写真の一覧
+</h1>
+
+<p id='photoes'>以下のボタンをクリックすると、写真が一覧表示されます。</p>
+<br>
+<button onclick='showPhotoes();' id='button_0'>写真を表示</button>
+<!-- partial -->
+  <script>
+  function showPhotoes(){
+  let num = ['1', '2', '3', '4', '5', '6', '7', '8'];
+  let p_place = document.getElementById('photoes');
+  for(let i=0; i < num.length; i=i+1){
+    p_place.insertAdjacentHTML('afterend','<img src="./photo_'+num[i]+'.jpg">');
+  }
+  document.getElementById('button_0').remove();
+  }
+
+  </script>
+
+</body>
+</html>
