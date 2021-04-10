@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>JS_training_20210409</title>
+  <style>
+    #_button{
+      font-size: 30px;
+      font-weight: 300;
+    }
+
+    #explanation {
+      font-size: 40px;
+      font-weight: bolder;
+      color: blue;
+    }
+  </style>
+
+</head>
+<body>
+
+<h1>
+  問題
+</h1>
+
+<p>次の方程式を満たす解を求めなさい。</p>
+<h2>x<sup>2</sup>-6x+8=0</h2>
+
+<br>
+<button id='_button' onclick=asw(1);>x=1</button>
+<button id='_button' onclick=asw(2);>x=2</button>
+<button id='_button' onclick=asw(3);>x=3</button>
+<button id='_button' onclick=asw(4);>x=4</button>
+<button id='_button' onclick=asw(5);>x=5</button>
+
+<p id='explanation'></p>
+
+  <script>
+    let i=0;
+    let exp = document.getElementById('explanation');
+    function asw(i){
+      if(i==2){
+        exp.textContent = '正解！！！';
+      }
+      else if(i==4){
+        exp.textContent = '正解！！！';
+      }
+      else{
+        exp.textContent = 'ブー！！！　大間違い';
+      }
+    }
+  </script>
+
+</body>
+</html>
