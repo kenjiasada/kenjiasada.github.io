@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>JS_training_20210410</title>
+  <style>
+    #_button{
+      font-size: 30px;
+      font-weight: 300;
+    }
+
+    #explanation {
+      font-size: 40px;
+      font-weight: bolder;
+      color: blue;
+    }
+  </style>
+
+</head>
+<body>
+
+<h1>
+  問題
+</h1>
+
+<p>次の方程式を満たす解を求めなさい。</p>
+<h2>x<sup>3</sup>-53x<sup>2</sup>+620x-1036=0</h2>
+<p>※この方程式は解が３つあり、すべて１以上の整数です。</p>
+
+<br>
+<button id='_button' onclick=calcu();>結果を見る</button>
+
+<p id='explanation'></p>
+
+  <script>
+    let i=0;
+    let exp = document.getElementById('explanation');
+    function calcu(){
+      n = -1;
+      let solutions = [];
+      for (i=0; i<=1000; i++){
+        result = i*i*i-i*i*53+i*620-1036;
+        if(result == 0){
+          n = n+1;
+          solutions[n]= i;
+        }
+        if (n==3){
+          break;
+        }
+        console.log(solutions)
+        exp.textContent = solutions[0] + 'と' +solutions[1]+ 'と' +solutions[2];
+      }
+    }
+  </script>
+
+</body>
+</html>
