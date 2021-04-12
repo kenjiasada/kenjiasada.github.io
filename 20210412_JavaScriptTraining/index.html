@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja" >
+<head>
+  <meta charset="UTF-8">
+  <title>EV Power Consumption Simulator</title>
+  <style>
+    label, button, #settings{
+      font-size: 25px;
+    }
+    h2{
+      background: palegreen;
+      border: 1px solid #ddd;
+      padding: 10px 5px;
+      line-height: 1em;
+    }
+  </style>
+
+</head>
+<body>
+
+<h1>EV Power Consumption Simulator</h1>
+
+<h2>Choose countries/area</h2>
+
+<label><input type="radio" name="country" onchange='select_c();' value="72059871">Japan</label>
+<label><input type="radio" name="country" onchange='select_c();' value="260000000">China</label>
+<label><input type="radio" name="country" onchange='select_c();' value="108547710">USA</label>
+<label><input type="radio" name="country" onchange='select_c();' value="242727242">EU</label>
+<label><input type="radio" name="country" onchange='select_c();' value="30242000">India</label>
+<label><input type="radio" name="country" onchange='select_c();' value="17338160">Korea</label>
+<label><input type="radio" name="country" onchange='select_c();' value="14580666">Indonesia</label>
+
+<p id='settings'>USER SETTINGS: EV rates, nuclear and solar power rates　<br><button onclick='inputRates();'>Input</button></p>
+
+<p>＿＿＿＿＿＿＿＿＿＿</p>
+
+<h2>Assumption</h2>
+
+<li id='EVrate'></li>
+<li id='NUrate'></li>
+<li id='SOrate'></li>
+<li id='WIrate'></li>
+
+<p>＿＿＿＿＿＿＿＿＿＿</p>
+
+<h2>The size of power source which will be needed</h2>
+
+<li id='NUreactors'></li>
+<li id='km_solar'></li>
+<li id='turbines'></li>
+<li id='tankers'></li>
+
+
+  <script>
+    let travel_mileage = [8739, 14136, 21696, 11964, 19544, 12629, 11000];
+
+    function select_c(){
+      var elems = document.getElementsByName("country");
+      for(var i = 0; i <elems.length; i++){
+        //elems[i].checked でラジオボタンの選択を確認できる
+        if(elems[i].checked){
+          console.log(elems[i].value);
+          var num_cars = parseInt(elems[i].value);
+          var km_travel = travel_mileage[i]
+          console.log(km_travel);
+        }
+      }
+
+      let EVrate = prompt('EV rate: input in number of ％ (0~100)');
+      document.getElementById('EVrate').textContent = 'EV rate:'+EVrate+' %';
+      let NUrate = prompt('Percentage of NUCLEAR power in total source: input in number of ％ (0~100)');
+      document.getElementById('NUrate').textContent = 'Nuclear rate: '+NUrate+' %';
+      let remainder = 100-parseInt(NUrate);
+      let SOrate = prompt('ercentage of SOLAR power in total source: input in number of ％ (0~'+ remainder +')');
+      document.getElementById('SOrate').textContent = 'Solar rate: '+SOrate+' %';
+      console.log(parseInt(NUrate));
+      console.log(parseInt(SOrate));
+      let WIrate = 100-parseInt(NUrate)-parseInt(SOrate);
+      document.getElementById('WIrate').textContent = 'Wind power rate'+WIrate+' %';
+
+      let NUreactors = (km_travel/6)*num_cars*(parseInt(EVrate)/100)*(parseInt(NUrate)/100)/10000000000;
+      document.getElementById('NUreactors').textContent = 'We need... '+NUreactors+' NUCLEAR REACTORS';
+
+      let km_solar = (km_travel/6)*num_cars*(parseInt(EVrate)/100)*(parseInt(SOrate)/100)/185/1000000;
+      document.getElementById('km_solar').textContent = 'We need... '+km_solar+' km2 of SOLAR PANELS';
+
+      let turbines = (km_travel/6)*num_cars*(parseInt(EVrate)/100)*(parseInt(WIrate)/100)/(216000*365);
+      document.getElementById('turbines').textContent = 'We need... '+turbines+' super large WIND TURBINES';
+
+      let tankers = (km_travel)*num_cars*(1 - parseInt(EVrate)/100)/22.1/(159*2000000);
+      document.getElementById('tankers').textContent = 'We will keep consuming... '+tankers+' very large TANKERS of GASOLINE';
+
+      
+
+    }
+
+  </script>
+
+</body>
+</html>
