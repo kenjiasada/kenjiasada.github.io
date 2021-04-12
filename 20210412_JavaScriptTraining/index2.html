@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <title>EV消費電力シミュレーター</title>
   <style>
+        label, button, #settings{
+      font-size: 25px;
+    }
+    h2{
+      background: palegreen;
+      border: 1px solid #ddd;
+      padding: 10px 5px;
+      line-height: 1em;
+    }
   </style>
 
 </head>
@@ -21,7 +30,7 @@
 <label><input type="radio" name="country" onchange='select_c();' value="17338160">韓国</label>
 <label><input type="radio" name="country" onchange='select_c();' value="14580666">インドネシア</label>
 
-<p>電気自動車化する比率、原発比率、太陽光比率　<button onclick='inputRates();'>入力</button></p>
+<p id='settings'>電気自動車化する比率、原発比率、太陽光比率　<button onclick='inputRates();'>入力</button></p>
 
 <p>＿＿＿＿＿＿＿＿＿＿</p>
 
