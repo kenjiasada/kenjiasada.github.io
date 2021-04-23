@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>JS_training_20210414</title>
+  <style>
+    #_button{
+      font-size: 30px;
+      font-weight: 300;
+    }
+
+    #explanation {
+      font-size: 40px;
+      font-weight: bolder;
+      color: blue;
+    }
+  </style>
+
+</head>
+<body>
+
+<h1>n〜mで割り切れる数字</h1>
+
+<p>1〜10の好きな範囲で<br>
+割り切れる最小の数値をJavaScriptを使って求めます。</p>
+
+<br>
+<button id='_button' onclick=set_range();>範囲を指定</button>
+
+<p id='explanation'></p>
+
+  <script>
+    let exp = document.getElementById('explanation');
+    function set_range(){
+      var min = prompt('範囲の最小値を1〜10で入力してください。', '1');
+      if (min<1 || min>10 || min%1 != 0){
+        alert('範囲は1〜10の整数で入力してください。');
+        return;
+      }
+      var max = prompt('範囲の最大値を1〜10で入力してください。', '10');
+      if (max<1 || max>10 || max%1 != 0 || min > max){
+        alert('範囲は1〜10の整数で正しく入力してください。');
+        return;
+      }
+
+      for (var i=1; i<3000; i++){
+        let count = 0;
+        for (var n = parseInt(min); n <= parseInt(max); n = n+1){
+          if(i%n == 0){
+            count++;
+          } else {}
+          if (count == parseInt(max)-parseInt(min)+1){
+            var answer = i;
+            console.log(answer);
+            exp.textContent = '答えは、'+ answer +'です。'
+            return;
+            // breakではないのです。
+          }
+        }
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>

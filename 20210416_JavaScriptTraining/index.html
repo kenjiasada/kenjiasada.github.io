@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>スタイルの変更</title>
+  <style>
+    body {
+      width: 704px;
+      margin: 0px auto;
+    }
+
+    #photo_list {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
+      border: solid 2px #666666;
+    }
+
+    #photo_list img {
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>PHOTO ALBUM</h1>
+
+<div id="photo_list">
+  <img src="pic01.jpg" onmouseover="mOver(this)" onmouseout="mOut(this)">
+  <img src="pic02.jpg" onmouseover="mOver(this)" onmouseout="mOut(this)">
+  <img src="pic03.jpg" onmouseover="mOver(this)" onmouseout="mOut(this)">
+  <img src="pic04.jpg" onmouseover="mOver(this)" onmouseout="mOut(this)">
+  <img src="pic05.jpg" onmouseover="mOver(this)" onmouseout="mOut(this)">
+  <img src="pic06.jpg" onmouseover="mOver(this)" onmouseout="mOut(this)">
+  <img src="pic07.jpg" onmouseover="mOver(this)" onmouseout="mOut(this)">
+</div>
+
+<script>
+  function mOver(obj){
+    obj.style.marginTop = '5px';
+    obj.style.marginBottom = '15px';
+    obj.style.boxShadow = '0px 5px 15px #666666';
+  }
+
+  function mOut(obj){
+    obj.style.margin = '10px';
+    obj.style.boxShadow = 'none';
+  }
+
+</script>
+
+</body>
+</html>
